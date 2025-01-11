@@ -17,7 +17,8 @@ The Application Runs on localhost:3000
 
 ## **Screenshot**
 
-<img width="1216" alt="image" src="https://github.com/user-attachments/assets/991ab69c-9ebb-4254-a489-1a124d69ce5e" />
+<img width="1719" alt="image" src="https://github.com/user-attachments/assets/1acc1ee2-0d97-4862-9458-a50291bca557" />
+
 
 
 ## **Deployment**
