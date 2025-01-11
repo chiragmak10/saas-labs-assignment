@@ -67,7 +67,7 @@ export const Table = ({ data, columns, itemsPerPage = 5 }) => {
     return (
         <div className="table-container">
             <div className="table-wrapper">
-                <table className="data-table" role="table" aria-label="data-table">
+                <table className="data-table" role="table" data-testid='data-table' aria-label="data-table">
                     <thead className="table-header">
                         <tr role="row">
                             {columns.map((column) => (
@@ -75,6 +75,7 @@ export const Table = ({ data, columns, itemsPerPage = 5 }) => {
                                     key={column.key}
                                     role="columnheader"
                                     scope="col"
+                                    data-testid='column'
                                 >
                                     {column.header}
                                 </th>
@@ -82,9 +83,10 @@ export const Table = ({ data, columns, itemsPerPage = 5 }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {currentData.map((item) => (
+                        {currentData.map((item, index) => (
                             <tr
-                                key={item['s.no']}
+                                data-testid='row'
+                                key={item['s.no'] || index}
                                 className="table-row"
                                 role="row"
                             >
