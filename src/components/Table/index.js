@@ -28,12 +28,10 @@ export const Table = ({ data, columns, itemsPerPage = 5 }) => {
             }
         }
 
-        // Always show last page
         if (totalPages > 1) {
             range.push(totalPages);
         }
 
-        // Add the page numbers with dots
         let l = null;
         for (const i of range) {
             if (l) {
