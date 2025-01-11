@@ -23,5 +23,4 @@ The Application Runs on localhost:3000
 
 ## **Deployment**
 
-Netlify Deployment - [https://678257aac4a4225ca3288112--chirag-saas-lab-assigment-table.netlify.app/
-](https://chirag-saas-lab-assigment-table.netlify.app/)
+Netlify Deployment - https://67828e5572baa5000890e091--chirag-saas-lab-assigment-table.netlify.app/
