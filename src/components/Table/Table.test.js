@@ -4,15 +4,11 @@ import '@testing-library/jest-dom';
 import { Table } from '.';
 import { mockData } from './mockdata'
 describe('Table Component', () => {
-
-
     const mockColumns = [
         { key: 's.no', header: 'S.No.' },
         { key: 'percentage.funded', header: 'Percentage Funded', format: (value) => `${value}%` },
         { key: 'amt.pledged', header: 'Amount Pledged', format: (value) => `$${value}` },
     ];
-
-
     describe('Rendering', () => {
 
         test('renders correct number of rows per page', () => {
@@ -31,8 +27,7 @@ describe('Table Component', () => {
         });
     });
 
-    // Pagination Tests
-    describe('Pagination', () => {
+    describe('pagination', () => {
         test('renders correct number of page buttons', () => {
             render(<Table data={mockData} columns={mockColumns} itemsPerPage={2} />);
             const pageButtons = screen.getAllByRole('button').filter(button =>
@@ -87,8 +82,6 @@ describe('Table Component', () => {
             expect(screen.queryByText('$3000')).not.toBeInTheDocument();
         });
     });
-
-    // Edge Cases
     describe('Edge Cases', () => {
         test('handles empty data array', () => {
             render(<Table data={[]} columns={mockColumns} />);
@@ -105,8 +98,6 @@ describe('Table Component', () => {
             expect(pageButtons).toHaveLength(1);
         });
     });
-
-    // Accessibility Tests
     describe('Accessibility', () => {
         test('table has appropriate ARIA labels', () => {
             render(<Table data={mockData} columns={mockColumns} />);
