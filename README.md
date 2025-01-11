@@ -7,6 +7,7 @@
 ```bash
 git clone https://github.com/chiragmak10/saas-labs-assignment
 ```
+2. Run below command
 ```bash
 npm install && npm start
 ```
