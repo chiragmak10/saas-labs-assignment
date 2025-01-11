@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import './style.css';
 
-export const Table = ({ data, columns, itemsPerPage = 5 }) => {
+export const Table = ({ data, columns, itemsPerPage = 5, style }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const totalPages = useMemo(() =>
@@ -64,7 +64,7 @@ export const Table = ({ data, columns, itemsPerPage = 5 }) => {
 
     return (
         <div className="table-container">
-            <div className="table-wrapper">
+            <div className="table-wrapper" style={{ ...style }}>
                 <table className="data-table" role="table" data-testid='data-table' aria-label="data-table">
                     <thead className="table-header">
                         <tr role="row">
@@ -146,7 +146,7 @@ export const Table = ({ data, columns, itemsPerPage = 5 }) => {
                     Next
                 </button>
             </div>
-        </div>
+        </div >
     );
 };
 
